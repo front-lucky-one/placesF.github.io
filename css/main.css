@@ -541,6 +541,9 @@ button{
 .pop-up__textarea::placeholder{
       color:rgba(255, 255, 255, 0.5); }
 
+.mod{
+  margin-bottom:50px; }
+
 .pop-up-active{
   display:-webkit-box;
   display:flex; }
@@ -879,7 +882,7 @@ button{
   -webkit-box-pack:justify;
   justify-content:space-between; }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     .confidence-section .wrapp-content{
       flex-wrap:wrap;
       -webkit-box-pack:center;
@@ -891,7 +894,7 @@ button{
       justify-content:center; } }
 
 .confidence-section .confidence{
-  width:376px;
+  width:214px;
   height:93px;
   display:-webkit-box;
   display:flex;
@@ -899,7 +902,6 @@ button{
   justify-content:center;
   -webkit-box-align:center;
   align-items:center;
-  background:#EFF0FD;
   border-radius:20px;
   margin:10px; }
 

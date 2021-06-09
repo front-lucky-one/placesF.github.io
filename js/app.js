@@ -43,7 +43,7 @@ var swiper2 = new Swiper(document.querySelector('.swiper-container2'), {
   },
   slidesPerView: 3
 });
-var popUp = document.querySelector('.pop-up');
+var popUp = document.querySelector('#popup1');
 
 if (popUp) {
   var button = document.querySelector('#btn').addEventListener('click', function () {
@@ -51,26 +51,49 @@ if (popUp) {
   });
 }
 
-var tabsButton = document.querySelector('.btn-block-tab').querySelectorAll('.button');
-var tabsTable = document.querySelector('.wrapp-tabs').querySelectorAll('.tabs-block');
-tabsButton.forEach(function (e, index) {
-  e.addEventListener('click', function (item) {
-    removeClass(tabsButton, 'button_active');
-    removeClass(tabsTable, 'active-tab');
-    addClass({
-      item: item.target,
-      index: index
-    });
-  });
-});
+var popUp2 = document.querySelector('#popup2');
+var buttonsDemo = document.querySelectorAll('.demo');
 
-function removeClass(item, className) {
-  item.forEach(function (e) {
-    e.classList.remove(className);
+if (buttonsDemo) {
+  buttonsDemo.forEach(function (e) {
+    e.addEventListener('click', function () {
+      popUp2.classList.add('pop-up-active');
+    });
   });
 }
 
-function addClass(object) {
-  object.item.classList.add('button_active');
-  tabsTable[object.index].classList.add('active-tab');
+var request = document.querySelector('.request');
+
+if (request) {
+  request.addEventListener('click', function () {
+    popUp.classList.add('pop-up-active');
+  });
+}
+
+var tabsButton = document.querySelector('.btn-block-tab');
+
+if (tabsButton) {
+  var removeClass = function removeClass(item, className) {
+    item.forEach(function (e) {
+      e.classList.remove(className);
+    });
+  };
+
+  var addClass = function addClass(object) {
+    object.item.classList.add('button_active');
+    tabsTable[object.index].classList.add('active-tab');
+  };
+
+  tabsButton.querySelectorAll('.button');
+  var tabsTable = document.querySelector('.wrapp-tabs').querySelectorAll('.tabs-block');
+  tabsButton.forEach(function (e, index) {
+    e.addEventListener('click', function (item) {
+      removeClass(tabsButton, 'button_active');
+      removeClass(tabsTable, 'active-tab');
+      addClass({
+        item: item.target,
+        index: index
+      });
+    });
+  });
 }
