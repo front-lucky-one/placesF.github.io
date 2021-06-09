@@ -78,9 +78,9 @@ if (workRequest) {
   });
 }
 
-var tabsButton = document.querySelector('.btn-block-tab');
+var tabsButtons = document.querySelector('.btn-block-tab');
 
-if (tabsButton) {
+if (tabsButtons) {
   var removeClass = function removeClass(item, className) {
     item.forEach(function (e) {
       e.classList.remove(className);
@@ -92,7 +92,7 @@ if (tabsButton) {
     tabsTable[object.index].classList.add('active-tab');
   };
 
-  tabsButton.querySelectorAll('.button');
+  var tabsButton = tabsButtons.querySelectorAll('.button');
   var tabsTable = document.querySelector('.wrapp-tabs').querySelectorAll('.tabs-block');
   tabsButton.forEach(function (e, index) {
     e.addEventListener('click', function (item) {
