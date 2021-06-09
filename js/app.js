@@ -70,6 +70,14 @@ if (request) {
   });
 }
 
+var workRequest = document.querySelector('.work-request');
+
+if (workRequest) {
+  workRequest.addEventListener('click', function () {
+    popUp.classList.add('pop-up-active');
+  });
+}
+
 var tabsButton = document.querySelector('.btn-block-tab');
 
 if (tabsButton) {
