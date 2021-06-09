@@ -7,7 +7,8 @@ var burger = document.querySelector('.burger').addEventListener('click', functio
 });
 var swiper = new Swiper(document.querySelector('.swiper-container'), {
   speed: 400,
-  spaceBetween: 60,
+  spaceBetween: 50,
+  loop: true,
   navigation: {
     nextEl: document.querySelector('.button-next'),
     prevEl: document.querySelector(".button-prev")
@@ -42,6 +43,14 @@ var swiper2 = new Swiper(document.querySelector('.swiper-container2'), {
   },
   slidesPerView: 3
 });
+var popUp = document.querySelector('.pop-up');
+
+if (popUp) {
+  var button = document.querySelector('#btn').addEventListener('click', function () {
+    popUp.classList.add('pop-up-active');
+  });
+}
+
 var tabsButton = document.querySelector('.btn-block-tab').querySelectorAll('.button');
 var tabsTable = document.querySelector('.wrapp-tabs').querySelectorAll('.tabs-block');
 tabsButton.forEach(function (e, index) {
