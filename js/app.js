@@ -44,14 +44,19 @@ var swiper2 = new Swiper(document.querySelector('.swiper-container2'), {
   slidesPerView: 3
 });
 var popUp = document.querySelector('#popup1');
+var close = popUp.querySelector('.pop-up__close');
 
 if (popUp) {
   var button = document.querySelector('#btn').addEventListener('click', function () {
     popUp.classList.add('pop-up-active');
   });
+  close.addEventListener('click', function () {
+    popUp.classList.remove('pop-up-active');
+  });
 }
 
 var popUp2 = document.querySelector('#popup2');
+var close2 = popUp2.querySelector('.pop-up__close');
 var buttonsDemo = document.querySelectorAll('.demo');
 
 if (buttonsDemo) {
@@ -59,6 +64,9 @@ if (buttonsDemo) {
     e.addEventListener('click', function () {
       popUp2.classList.add('pop-up-active');
     });
+  });
+  close2.addEventListener('click', function () {
+    popUp2.classList.remove('pop-up-active');
   });
 }
 

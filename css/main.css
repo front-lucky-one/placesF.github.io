@@ -447,7 +447,26 @@ button{
   backdrop-filter:blur(10px);
   z-index:5; }
 
+.pop-up__close{
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    justify-content:center;
+    width:41px;
+    height:41px;
+    font-size:52px;
+    position:absolute;
+    right:0;
+    top:0px;
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+    color:white; }
+
 .pop-up__container{
+    position:relative;
     background:#5B61ED;
     border-radius:20px;
     padding:60px 20px;
@@ -540,6 +559,11 @@ button{
 
 .pop-up__textarea::placeholder{
       color:rgba(255, 255, 255, 0.5); }
+
+.mod_subtitle{
+  max-width:456px;
+  margin:0 auto;
+  margin-bottom:30px; }
 
 .mod{
   margin-bottom:50px; }
